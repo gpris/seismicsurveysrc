@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{70970DEC-F027-4824-979F-E579782C6782}</ProjectGuid>
+    <RootNamespace>SeismicSurvey</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>.\CorrelationLib\X86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CorrelationLib_d.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>.\CorrelationLib\X86;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>CorrelationLib.lib</AdditionalDependencies>
+    </Link>
+    <Midl>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </Midl>
+    <ResourceCompile>
+      <Culture>0x0412</Culture>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+    <None Include="res\buttons.bmp" />
+    <None Include="res\classview.bmp" />
+    <None Include="res\classview_hc.bmp" />
+    <None Include="res\class_view.ico" />
+    <None Include="res\class_view_hc.ico" />
+    <None Include="res\explorer.bmp" />
+    <None Include="res\explorer_hc.bmp" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\fileview.bmp" />
+    <None Include="res\fileview_hc.bmp" />
+    <None Include="res\file_view.ico" />
+    <None Include="res\file_view_hc.ico" />
+    <None Include="res\main.bmp" />
+    <None Include="res\menuimages.bmp" />
+    <None Include="res\menuimages_hc.bmp" />
+    <None Include="res\output_wnd.ico" />
+    <None Include="res\output_wnd_hc.ico" />
+    <None Include="res\properties.bmp" />
+    <None Include="res\properties_hc.bmp" />
+    <None Include="res\properties_wnd.ico" />
+    <None Include="res\properties_wnd_hc.ico" />
+    <None Include="res\ribbon.mfcribbon-ms" />
+    <None Include="res\SeismicSurvey.ico" />
+    <None Include="res\SeismicSurvey.rc2" />
+    <None Include="res\SeismicSurveyDoc.ico" />
+    <None Include="res\sort.bmp" />
+    <None Include="res\sort_hc.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AuslogWinch.h" />
+    <ClInclude Include="Auslog\AuslogWinchPkt.h" />
+    <ClInclude Include="Auslog\AuslogWinchStatusData.h" />
+    <ClInclude Include="BiSplitterWnd\BiSplitterWnd.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="ClassView.h" />
+    <ClInclude Include="Contour\Contour.h" />
+    <ClInclude Include="Contour\ContourChildFrm.h" />
+    <ClInclude Include="Contour\ContourDoc.h" />
+    <ClInclude Include="Contour\ContourView.h" />
+    <ClInclude Include="Contour\Dib.h" />
+    <ClInclude Include="Contour\InputReader.h" />
+    <ClInclude Include="Contour\LevelFile.h" />
+    <ClInclude Include="CorrelationDlg.h" />
+    <ClInclude Include="CorrelationLib\Constants.h" />
+    <ClInclude Include="CorrelationLib\CorrelationLib.h" />
+    <ClInclude Include="DabFile.h" />
+    <ClInclude Include="DabPacket.h" />
+    <ClInclude Include="DabPacketDraw.h" />
+    <ClInclude Include="DatFile.h" />
+    <ClInclude Include="DatPacket.h" />
+    <ClInclude Include="FileTreeView.h" />
+    <ClInclude Include="FileView.h" />
+    <ClInclude Include="Filter\iirfir\FFTCode.h" />
+    <ClInclude Include="Filter\iirfir\FilterCoefficients.hpp" />
+    <ClInclude Include="Filter\iirfir\FIRFilterCode.h" />
+    <ClInclude Include="Filter\iirfir\IIRFilterCode.h" />
+    <ClInclude Include="Filter\iirfir\NewParksMcClellan.h" />
+    <ClInclude Include="Filter\iirfir\QuadRootsCode.h" />
+    <ClInclude Include="GCColorStatic\GCColorStatic.h" />
+    <ClInclude Include="GridPacket\GridPacket.h" />
+    <ClInclude Include="IIRFilterDlg.h" />
+    <ClInclude Include="Layer\LayerCellOfTwoLayers.h" />
+    <ClInclude Include="Layer\LayerData.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="PathNameInfo\PathNameInfo.h" />
+    <ClInclude Include="PropertiesWnd.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="RxControlDlg.h" />
+    <ClInclude Include="RxControlPane.h" />
+    <ClInclude Include="ScanInfo.h" />
+    <ClInclude Include="ScanMonitorDlg.h" />
+    <ClInclude Include="ScopeView.h" />
+    <ClInclude Include="SeismicData.h" />
+    <ClInclude Include="SeismicDataDraw.h" />
+    <ClInclude Include="SeismicSonde.h" />
+    <ClInclude Include="SeismicSurvey.h" />
+    <ClInclude Include="SeismicSurveyDoc.h" />
+    <ClInclude Include="SeismicSurveyView.h" />
+    <ClInclude Include="SerialPort\SerialPort.h" />
+    <ClInclude Include="SetDepthDlg.h" />
+    <ClInclude Include="SignalProcessingParameter.h" />
+    <ClInclude Include="SpiritSData.h" />
+    <ClInclude Include="SpiritSPacket.h" />
+    <ClInclude Include="SplitterChildFrm.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SurveyCtrlDlg.h" />
+    <ClInclude Include="SurveyCtrlPane.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="TriggerMonitorDlg.h" />
+    <ClInclude Include="TxControlDlg.h" />
+    <ClInclude Include="TxControlPane.h" />
+    <ClInclude Include="ViewTree.h" />
+    <ClInclude Include="WinchCtrlDlg.h" />
+    <ClInclude Include="WinchCtrlPane.h" />
+    <ClInclude Include="WinchMoveDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AuslogWinch.cpp" />
+    <ClCompile Include="Auslog\AuslogWinchPkt.cpp" />
+    <ClCompile Include="Auslog\AuslogWinchStatusData.cpp" />
+    <ClCompile Include="BiSplitterWnd\BiSplitterWnd.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="ClassView.cpp" />
+    <ClCompile Include="Contour\Contour.cpp" />
+    <ClCompile Include="Contour\ContourChildFrm.cpp" />
+    <ClCompile Include="Contour\ContourDoc.cpp" />
+    <ClCompile Include="Contour\ContourView.cpp" />
+    <ClCompile Include="Contour\Dib.cpp" />
+    <ClCompile Include="Contour\InputReader.cpp" />
+    <ClCompile Include="Contour\LevelFile.cpp" />
+    <ClCompile Include="CorrelationDlg.cpp" />
+    <ClCompile Include="DabFile.cpp" />
+    <ClCompile Include="DabPacket.cpp" />
+    <ClCompile Include="DabPacketDraw.cpp" />
+    <ClCompile Include="DatFile.cpp" />
+    <ClCompile Include="DatPacket.cpp" />
+    <ClCompile Include="FileTreeView.cpp" />
+    <ClCompile Include="FileView.cpp" />
+    <ClCompile Include="Filter\iirfir\FFTCode.cpp" />
+    <ClCompile Include="Filter\iirfir\FIRFilterCode.cpp" />
+    <ClCompile Include="Filter\iirfir\IIRFilterCode.cpp" />
+    <ClCompile Include="Filter\iirfir\NewParksMcClellan.cpp" />
+    <ClCompile Include="Filter\iirfir\QuadRootsCode.cpp" />
+    <ClCompile Include="GCColorStatic\GCColorStatic.cpp" />
+    <ClCompile Include="GridPacket\GridPacket.cpp" />
+    <ClCompile Include="IIRFilterDlg.cpp" />
+    <ClCompile Include="Layer\LayerCellOfTwoLayers.cpp" />
+    <ClCompile Include="Layer\LayerData.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="NR\recipes\four1.cpp" />
+    <ClCompile Include="NR\recipes\fourn.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="PathNameInfo\PathNameInfo.cpp" />
+    <ClCompile Include="PropertiesWnd.cpp" />
+    <ClCompile Include="RxControlDlg.cpp" />
+    <ClCompile Include="RxControlPane.cpp" />
+    <ClCompile Include="ScanInfo.cpp" />
+    <ClCompile Include="ScanMonitorDlg.cpp" />
+    <ClCompile Include="ScopeView.cpp" />
+    <ClCompile Include="SeismicData.cpp" />
+    <ClCompile Include="SeismicDataDraw.cpp" />
+    <ClCompile Include="SeismicSonde.cpp" />
+    <ClCompile Include="SeismicSurvey.cpp" />
+    <ClCompile Include="SeismicSurveyDoc.cpp" />
+    <ClCompile Include="SeismicSurveyView.cpp" />
+    <ClCompile Include="SerialPort\SerialPort.cpp" />
+    <ClCompile Include="SetDepthDlg.cpp" />
+    <ClCompile Include="SignalProcessingParameter.cpp" />
+    <ClCompile Include="SpiritSData.cpp" />
+    <ClCompile Include="SpiritSPacket.cpp" />
+    <ClCompile Include="SplitterChildFrm.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SurveyCtrlDlg.cpp" />
+    <ClCompile Include="SurveyCtrlPane.cpp" />
+    <ClCompile Include="TriggerMonitorDlg.cpp" />
+    <ClCompile Include="TxControlDlg.cpp" />
+    <ClCompile Include="TxControlPane.cpp" />
+    <ClCompile Include="ViewTree.cpp" />
+    <ClCompile Include="WinchCtrlDlg.cpp" />
+    <ClCompile Include="WinchCtrlPane.cpp" />
+    <ClCompile Include="WinchMoveDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="SeismicSurvey.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="SeismicSurvey.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

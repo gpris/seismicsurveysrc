@@ -30,3 +30,10 @@
 *.exe
 *.out
 *.app
+/SeismicSurvey/x64/Debug
+/.vs
+/Debug
+/SeismicSurvey/Debug
+/x64/Debug
+/SeismicSurvey/SeismicSurvey.aps
+ 
